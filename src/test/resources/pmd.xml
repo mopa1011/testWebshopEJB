@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<ruleset name="Custom ruleset" xmlns="http://pmd.sf.net/ruleset/1.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://pmd.sf.net/ruleset/1.0.0 http://pmd.sf.net/ruleset_xml_schema.xsd"
+	xsi:noNamespaceSchemaLocation="http://pmd.sf.net/ruleset_xml_schema.xsd">
+
+	<description>
+		Anpassungen von PMD Rulesets
+		Siehe http://pmd.sourceforge.net/howtomakearuleset.html
+	</description>
+
+	<rule ref="rulesets/basic.xml"/>
+	<rule ref="rulesets/unusedcode.xml"/>
+	<rule ref="rulesets/strings.xml"/>
+	<rule ref="rulesets/braces.xml"/>
+	
+	<rule ref="rulesets/imports.xml">
+		<exclude name="TooManyStaticImports"/>
+	</rule>
+	<rule ref="rulesets/imports.xml/TooManyStaticImports">
+		<properties>
+			<!-- Namen von NamedQueries einschl. Platzhalter verursachen viele "static import" -->
+			<property name="maximumStaticImports" value="20" />
+		</properties>
+	</rule>
+	
+	<rule ref="rulesets/naming.xml">
+		<exclude name="ShortVariable"/>
+		<exclude name="LongVariable"/>
+	</rule>
+	
+	<rule ref="rulesets/logging-java.xml">
+		<exclude name="MoreThanOneLogger"/>
+	</rule>
+	
+	<rule ref="rulesets/design.xml">
+		<exclude name="AvoidReassigningParameters"/>
+		<exclude name="MissingStaticMethodInNonInstantiatableClass"/>
+		<exclude name="AbstractClassWithoutAbstractMethod"/>
+		<exclude name="UnnecessaryLocalBeforeReturn"/>
+	</rule>
+	
+	<rule ref="rulesets/controversial.xml">
+		<exclude name="NullAssignment"/>
+		<exclude name="OnlyOneReturn"/>
+		<exclude name="DataflowAnomalyAnalysis"/>
+		<exclude name="AtLeastOneConstructor"/>
+		<exclude name="AvoidFinalLocalVariable"/>
+		<exclude name="AvoidUsingShortType"/>
+	</rule>
+</ruleset>

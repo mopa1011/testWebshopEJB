@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE dataset SYSTEM "db.dtd">
+<dataset>
+  <benutzer idbenutzer="1" email="rest1012@hs-karlsruhe.de" vorname="Stefan" nachname="Rellmann" kontonummer="1000" bankleitzahl="2000" passwort="webshop" newsletter="false" erstellungsdatum="2010-10-28 15:00:00.0"/>
+  <benutzer idbenutzer="2" email="sast1011@hs-karlsruhe.de" vorname="Stephan" nachname="Sauer" kontonummer="1000" bankleitzahl="2000" passwort="webshop" newsletter="false" erstellungsdatum="2010-10-28 15:00:00.0"/>
+  <benutzer idbenutzer="3" email="thro1011@hs-karlsruhe.de" vorname="Robert" nachname="Thummert" kontonummer="1000" bankleitzahl="2000" passwort="webshop" newsletter="false" erstellungsdatum="2010-10-28 15:00:00.0"/>
+  <benutzer idbenutzer="4" email="scbe1015@hs-karlsruhe.de" vorname="Benjamin" nachname="Scheidt" kontonummer="1000" bankleitzahl="2000" passwort="webshop" newsletter="false" erstellungsdatum="2010-10-28 15:00:00.0"/>
+  <benutzer idbenutzer="5" email="mopa1011@hs-karlsruhe.de" vorname="Patrick" nachname="Moser" kontonummer="1000" bankleitzahl="2000" passwort="webshop" newsletter="false" erstellungsdatum="2010-10-28 15:00:00.0"/>
+  <adresse idadresse="1" benutzer_idbenutzer="2" postleitzahl="67368" ort="Westheim" strasse="Nachtigallenweg" hausnummer="13" art="R"/>
+  <adresse idadresse="2" benutzer_idbenutzer="1" postleitzahl="77777" ort="XXX" strasse="Karl-Str." hausnummer="1" name="Heinz" vorname="Karl" art="L"/>
+  <adresse idadresse="3" benutzer_idbenutzer="1" postleitzahl="76149" ort="Karlsruhe" strasse="Kaiserallee" hausnummer="2" art="R"/>
+  <adresse idadresse="4" benutzer_idbenutzer="2" postleitzahl="88888" ort="Berlin" strasse="DDR-Str." hausnummer="100" name="Zufall" vorname="Rainer" art="L"/>
+  <adresse idadresse="5" benutzer_idbenutzer="5" postleitzahl="12345" ort="KeineAhnung" strasse="Hauptstr." hausnummer="20" art="R"/>
+  <artikel idartikel="1" bezeichnung="jacke" preis="50.0" erstellungsdatum="2006-01-01 00:00:00.0" aenderungsdatum="2006-01-01 00:00:00.0" imsortiment="true"/>
+  <artikel idartikel="2" bezeichnung="hose" preis="100.0" erstellungsdatum="2006-01-01 00:00:00.0" aenderungsdatum="2006-01-01 00:00:00.0" imsortiment="false"/>
+  <bestellung idbestellung="1" benutzer_idbenutzer="2" bestellstatus="WARENKORB" zahlungsart="BAR" gesamtpreis="0.0" erstellungsdatum="2001-12-16 12:00:00.0"/>
+  <bestellung idbestellung="2" benutzer_idbenutzer="2" bestellstatus="BESTELLT" zahlungsart="BAR" gesamtpreis="0.0" erstellungsdatum="2001-12-16 12:00:00.0"/>
+  <bestellung idbestellung="3" benutzer_idbenutzer="1" bestellstatus="WARENKORB" zahlungsart="RECHNUNG" gesamtpreis="0.0" erstellungsdatum="2001-12-16 12:00:00.0"/>
+  <bestellung idbestellung="4" benutzer_idbenutzer="4" bestellstatus="WARENKORB" zahlungsart="RECHNUNG" gesamtpreis="0.0" erstellungsdatum="2001-12-16 12:00:00.0"/>
+  <bestellung idbestellung="5" benutzer_idbenutzer="4" bestellstatus="WARENKORB" zahlungsart="RECHNUNG" gesamtpreis="0.0" erstellungsdatum="2001-12-16 12:00:00.0"/>
+  <lager idlager="1" artikel_idartikel="1" farbe="BLAU" groesse="L" bestand_ist="50" bestand_min="10"/>
+  <lager idlager="2" artikel_idartikel="1" farbe="ROT" groesse="M" bestand_ist="60" bestand_min="10"/>
+  <lager idlager="3" artikel_idartikel="1" farbe="ROT" groesse="XL" bestand_ist="20" bestand_min="5"/>
+  <lager idlager="4" artikel_idartikel="2" farbe="WEISS" groesse="S" bestand_ist="10" bestand_min="5"/>
+  <lager idlager="5" artikel_idartikel="2" farbe="BLAU" groesse="XS" bestand_ist="5" bestand_min="1"/>
+  <lager idlager="6" artikel_idartikel="2" farbe="WEISS" groesse="XXXXL" bestand_ist="3" bestand_min="1"/>
+  <bestellposition idbestellposition="1" position="1" lager_idlager="1" bestellung_idbestellung="2" menge="4" erstellungsdatum="2006-01-01 00:00:00.0"/>
+  <bestellposition idbestellposition="2" position="2" lager_idlager="1" bestellung_idbestellung="1" menge="1" erstellungsdatum="2006-01-01 00:00:00.0"/>
+  <bestellposition idbestellposition="3" position="1" lager_idlager="2" bestellung_idbestellung="1" menge="2" erstellungsdatum="2006-01-01 00:00:00.0"/>
+  <bestellposition idbestellposition="4" position="2" lager_idlager="2" bestellung_idbestellung="2" menge="1" erstellungsdatum="2006-01-01 00:00:00.0"/>
+  <bestellposition idbestellposition="5" position="3" lager_idlager="2" bestellung_idbestellung="2" menge="5" erstellungsdatum="2006-01-01 00:00:00.0"/>
+  <kategorie idkategorie="1" bezeichnung="Mann"/>
+  <kategorie idkategorie="2" bezeichnung="Frau"/>
+  <kategorie idkategorie="3" kategorie_idkategorie="1" bezeichnung="Hose"/>
+  <kategorie idkategorie="4" kategorie_idkategorie="2" bezeichnung="Rock "/>
+  <kategorie idkategorie="5" kategorie_idkategorie="1" bezeichnung="Hemd"/>
+  <kategorie idkategorie="6" kategorie_idkategorie="3" bezeichnung="Jeans"/>
+  <kategorie idkategorie="7" kategorie_idkategorie="3" bezeichnung="Stoff "/>
+  <kategorie idkategorie="8" kategorie_idkategorie="1" bezeichnung="Shirt"/>
+  <kategorie idkategorie="9" kategorie_idkategorie="2" bezeichnung="Shirt"/>
+  <kategorie idkategorie="10" kategorie_idkategorie="8" bezeichnung="T-Shirt"/>
+  <kategorie idkategorie="11" kategorie_idkategorie="8" bezeichnung="Langarm"/>
+  <kategorie idkategorie="12" kategorie_idkategorie="9" bezeichnung="T-Shirt"/>
+  <kategorie_has_artikel idkategoriehasartikel="1" artikel_idartikel="1" kategorie_idkategorie="1"/>
+  <kategorie_has_artikel idkategoriehasartikel="2" artikel_idartikel="1" kategorie_idkategorie="3"/>
+  <kategorie_has_artikel idkategoriehasartikel="3" artikel_idartikel="1" kategorie_idkategorie="6"/>
+  <kategorie_has_artikel idkategoriehasartikel="4" artikel_idartikel="2" kategorie_idkategorie="2"/>
+  <produktbewertung idproduktbewertung="1" artikel_idartikel="2" benutzer_idbenutzer="1" bewertung="3" kommentar="Produkt ist OK" erstellungsdatum="2003-03-17 17:00:00.0"/>
+  <produktbewertung idproduktbewertung="2" artikel_idartikel="2" benutzer_idbenutzer="2" bewertung="4" kommentar="Produkt ist gut" erstellungsdatum="2003-03-17 17:00:00.0"/>
+  <produktbewertung idproduktbewertung="3" artikel_idartikel="2" benutzer_idbenutzer="3" bewertung="1" kommentar="schlechtes Produkt, geht zurueck" erstellungsdatum="2003-03-17 17:00:00.0"/>
+  <produktbewertung idproduktbewertung="4" artikel_idartikel="1" benutzer_idbenutzer="4" bewertung="5" kommentar="top produkt" erstellungsdatum="2004-03-17 17:00:00.0"/>
+  <produktbewertung idproduktbewertung="5" artikel_idartikel="1" benutzer_idbenutzer="5" bewertung="3" kommentar="awd" erstellungsdatum="2003-03-17 17:00:00.0"/>
+  <produktbewertung idproduktbewertung="6" artikel_idartikel="1" benutzer_idbenutzer="1" bewertung="2" erstellungsdatum="2003-03-17 17:00:00.0"/>
+  <produktbewertung idproduktbewertung="7" artikel_idartikel="2" benutzer_idbenutzer="2" bewertung="4" erstellungsdatum="2003-03-17 17:00:00.0"/>
+  <produktbewertung idproduktbewertung="8" artikel_idartikel="2" benutzer_idbenutzer="2" bewertung="5" kommentar="top produkt!!!!!" erstellungsdatum="2003-03-17 17:00:00.0"/>
+  <produktbewertung idproduktbewertung="9" artikel_idartikel="1" benutzer_idbenutzer="3" bewertung="3" erstellungsdatum="2003-03-17 17:00:00.0"/>
+  <produktbewertung idproduktbewertung="10" artikel_idartikel="1" benutzer_idbenutzer="1" bewertung="4" erstellungsdatum="2010-03-17 17:00:00.0"/>
+  <produktbewertung idproduktbewertung="11" artikel_idartikel="1" benutzer_idbenutzer="2" bewertung="5" erstellungsdatum="2003-03-17 17:00:00.0"/>
+  <produktbewertung idproduktbewertung="12" artikel_idartikel="1" benutzer_idbenutzer="3" bewertung="2" kommentar="sehr schlechtes produkt" erstellungsdatum="2003-03-17 17:00:00.0"/>
+  <rolle idrolle="1" rolle="KUNDE"/>
+  <rolle idrolle="2" rolle="MITARBEITER"/>
+  <rolle idrolle="3" rolle="ADMINISTRATOR"/>
+  <rolle_has_benutzer idrollehasbenutzer="1" rolle_idrolle="3" benutzer_idbenutzer="1"/>
+  <rolle_has_benutzer idrollehasbenutzer="2" rolle_idrolle="3" benutzer_idbenutzer="2"/>
+  <rolle_has_benutzer idrollehasbenutzer="3" rolle_idrolle="3" benutzer_idbenutzer="3"/>
+  <rolle_has_benutzer idrollehasbenutzer="4" rolle_idrolle="1" benutzer_idbenutzer="4"/>
+  <rolle_has_benutzer idrollehasbenutzer="5" rolle_idrolle="1" benutzer_idbenutzer="5"/>
+</dataset>

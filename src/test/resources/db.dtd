@@ -1,0 +1,119 @@
+<!ELEMENT dataset (
+    benutzer*,
+    adresse*,
+    artikel*,
+    bestellung*,
+    lager*,
+    bestellposition*,
+    kategorie*,
+    kategorie_has_artikel*,
+    produktbewertung*,
+    rolle*,
+    rolle_has_benutzer*)>
+
+<!ELEMENT benutzer EMPTY>
+<!ATTLIST benutzer
+    idbenutzer CDATA #REQUIRED
+    email CDATA #REQUIRED
+    vorname CDATA #REQUIRED
+    nachname CDATA #REQUIRED
+    kontonummer CDATA #IMPLIED
+    bankleitzahl CDATA #IMPLIED
+    passwort CDATA #REQUIRED
+    newsletter CDATA #REQUIRED
+    erstellungsdatum CDATA #REQUIRED
+    aenderungsdatum CDATA #IMPLIED
+>
+
+<!ELEMENT adresse EMPTY>
+<!ATTLIST adresse
+    idadresse CDATA #REQUIRED
+    benutzer_idbenutzer CDATA #REQUIRED
+    postleitzahl CDATA #REQUIRED
+    ort CDATA #REQUIRED
+    strasse CDATA #REQUIRED
+    hausnummer CDATA #REQUIRED
+    name CDATA #IMPLIED
+    vorname CDATA #IMPLIED
+    art CDATA #REQUIRED
+>
+
+<!ELEMENT artikel EMPTY>
+<!ATTLIST artikel
+    idartikel CDATA #REQUIRED
+    bezeichnung CDATA #REQUIRED
+    preis CDATA #REQUIRED
+    erstellungsdatum CDATA #REQUIRED
+    aenderungsdatum CDATA #IMPLIED
+    imsortiment CDATA #REQUIRED
+>
+
+<!ELEMENT bestellung EMPTY>
+<!ATTLIST bestellung
+    idbestellung CDATA #REQUIRED
+    benutzer_idbenutzer CDATA #REQUIRED
+    bestellstatus CDATA #IMPLIED
+    zahlungsart CDATA #IMPLIED
+    gesamtpreis CDATA #REQUIRED
+    erstellungsdatum CDATA #REQUIRED
+    aenderungsdatum CDATA #IMPLIED
+>
+
+<!ELEMENT lager EMPTY>
+<!ATTLIST lager
+    idlager CDATA #REQUIRED
+    artikel_idartikel CDATA #REQUIRED
+    farbe CDATA #IMPLIED
+    groesse CDATA #IMPLIED
+    bestand_ist CDATA #REQUIRED
+    bestand_min CDATA #REQUIRED
+>
+
+<!ELEMENT bestellposition EMPTY>
+<!ATTLIST bestellposition
+    idbestellposition CDATA #REQUIRED
+    position CDATA #IMPLIED
+    lager_idlager CDATA #REQUIRED
+    bestellung_idbestellung CDATA #REQUIRED
+    menge CDATA #REQUIRED
+    erstellungsdatum CDATA #REQUIRED
+    aenderungsdatum CDATA #IMPLIED
+>
+
+<!ELEMENT kategorie EMPTY>
+<!ATTLIST kategorie
+    idkategorie CDATA #REQUIRED
+    kategorie_idkategorie CDATA #IMPLIED
+    bezeichnung CDATA #REQUIRED
+>
+
+<!ELEMENT kategorie_has_artikel EMPTY>
+<!ATTLIST kategorie_has_artikel
+    idkategoriehasartikel CDATA #REQUIRED
+    artikel_idartikel CDATA #REQUIRED
+    kategorie_idkategorie CDATA #REQUIRED
+>
+
+<!ELEMENT produktbewertung EMPTY>
+<!ATTLIST produktbewertung
+    idproduktbewertung CDATA #REQUIRED
+    artikel_idartikel CDATA #REQUIRED
+    benutzer_idbenutzer CDATA #REQUIRED
+    bewertung CDATA #REQUIRED
+    kommentar CDATA #IMPLIED
+    erstellungsdatum CDATA #REQUIRED
+>
+
+<!ELEMENT rolle EMPTY>
+<!ATTLIST rolle
+    idrolle CDATA #REQUIRED
+    rolle CDATA #REQUIRED
+>
+
+<!ELEMENT rolle_has_benutzer EMPTY>
+<!ATTLIST rolle_has_benutzer
+    idrollehasbenutzer CDATA #REQUIRED
+    rolle_idrolle CDATA #REQUIRED
+    benutzer_idbenutzer CDATA #REQUIRED
+>
+
